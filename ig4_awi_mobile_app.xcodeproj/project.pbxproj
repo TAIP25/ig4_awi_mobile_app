@@ -11,6 +11,8 @@
 		35DE71DE2BA19C6E009B9237 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DE71DD2BA19C6E009B9237 /* ContentView.swift */; };
 		35DE71E02BA19C73009B9237 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35DE71DF2BA19C73009B9237 /* Assets.xcassets */; };
 		35DE71E32BA19C73009B9237 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35DE71E22BA19C73009B9237 /* Preview Assets.xcassets */; };
+		35DE71EA2BA19D44009B9237 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 35DE71E92BA19D44009B9237 /* LICENSE */; };
+		35DE71EC2BA19D50009B9237 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 35DE71EB2BA19D50009B9237 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		35DE71DD2BA19C6E009B9237 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		35DE71DF2BA19C73009B9237 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35DE71E22BA19C73009B9237 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		35DE71E92BA19D44009B9237 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		35DE71EB2BA19D50009B9237 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +39,9 @@
 		35DE71CF2BA19C6E009B9237 = {
 			isa = PBXGroup;
 			children = (
-				35DE71DA2BA19C6E009B9237 /* ig4_awi_mobile_app */,
+				35DE71EB2BA19D50009B9237 /* README.md */,
+				35DE71E92BA19D44009B9237 /* LICENSE */,
+				35DE71DA2BA19C6E009B9237 /* src */,
 				35DE71D92BA19C6E009B9237 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,7 +54,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		35DE71DA2BA19C6E009B9237 /* ig4_awi_mobile_app */ = {
+		35DE71DA2BA19C6E009B9237 /* src */ = {
 			isa = PBXGroup;
 			children = (
 				35DE71DB2BA19C6E009B9237 /* ig4_awi_mobile_appApp.swift */,
@@ -56,7 +62,7 @@
 				35DE71DF2BA19C73009B9237 /* Assets.xcassets */,
 				35DE71E12BA19C73009B9237 /* Preview Content */,
 			);
-			path = ig4_awi_mobile_app;
+			path = src;
 			sourceTree = "<group>";
 		};
 		35DE71E12BA19C73009B9237 /* Preview Content */ = {
@@ -125,7 +131,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35DE71EA2BA19D44009B9237 /* LICENSE in Resources */,
 				35DE71E32BA19C73009B9237 /* Preview Assets.xcassets in Resources */,
+				35DE71EC2BA19D50009B9237 /* README.md in Resources */,
 				35DE71E02BA19C73009B9237 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
