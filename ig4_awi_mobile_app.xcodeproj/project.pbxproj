@@ -7,28 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		35DE71DC2BA19C6E009B9237 /* ig4_awi_mobile_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DE71DB2BA19C6E009B9237 /* ig4_awi_mobile_appApp.swift */; };
-		35DE71DE2BA19C6E009B9237 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DE71DD2BA19C6E009B9237 /* LoginScreen.swift */; };
-		35DE71E02BA19C73009B9237 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35DE71DF2BA19C73009B9237 /* Assets.xcassets */; };
-		35DE71E32BA19C73009B9237 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35DE71E22BA19C73009B9237 /* Preview Assets.xcassets */; };
-		35DE71EA2BA19D44009B9237 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 35DE71E92BA19D44009B9237 /* LICENSE */; };
-		35DE71EC2BA19D50009B9237 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 35DE71EB2BA19D50009B9237 /* README.md */; };
-		B7921D212BA1A8C5000E421B /* logo_FDJ_FINAL_vectorisé.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B7921D1F2BA1A8C5000E421B /* logo_FDJ_FINAL_vectorisé.jpg */; };
-		B7921D222BA1A8C5000E421B /* logoFdJ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B7921D202BA1A8C5000E421B /* logoFdJ.jpg */; };
-		B7921D242BA1AE8D000E421B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7921D232BA1AE8D000E421B /* LoginViewModel.swift */; };
+		35DE72072BA49179009B9237 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 35DE72042BA49179009B9237 /* LICENSE */; };
+		35DE72082BA49179009B9237 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 35DE72052BA49179009B9237 /* README.md */; };
+		35DE72092BA49179009B9237 /* src in Resources */ = {isa = PBXBuildFile; fileRef = 35DE72062BA49179009B9237 /* src */; };
+		35DE720B2BA49378009B9237 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 35DE720A2BA49378009B9237 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		35DE71D82BA19C6E009B9237 /* ig4_awi_mobile_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ig4_awi_mobile_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		35DE71DB2BA19C6E009B9237 /* ig4_awi_mobile_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ig4_awi_mobile_appApp.swift; sourceTree = "<group>"; };
-		35DE71DD2BA19C6E009B9237 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
-		35DE71DF2BA19C73009B9237 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		35DE71E22BA19C73009B9237 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		35DE71E92BA19D44009B9237 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		35DE71EB2BA19D50009B9237 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		B7921D1F2BA1A8C5000E421B /* logo_FDJ_FINAL_vectorisé.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "logo_FDJ_FINAL_vectorisé.jpg"; sourceTree = "<group>"; };
-		B7921D202BA1A8C5000E421B /* logoFdJ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logoFdJ.jpg; sourceTree = "<group>"; };
-		B7921D232BA1AE8D000E421B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		35DE72042BA49179009B9237 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		35DE72052BA49179009B9237 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		35DE72062BA49179009B9237 /* src */ = {isa = PBXFileReference; lastKnownFileType = folder; path = src; sourceTree = "<group>"; };
+		35DE720A2BA49378009B9237 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,9 +35,10 @@
 		35DE71CF2BA19C6E009B9237 = {
 			isa = PBXGroup;
 			children = (
-				35DE71EB2BA19D50009B9237 /* README.md */,
-				35DE71E92BA19D44009B9237 /* LICENSE */,
-				35DE71DA2BA19C6E009B9237 /* src */,
+				35DE720A2BA49378009B9237 /* .gitignore */,
+				35DE72042BA49179009B9237 /* LICENSE */,
+				35DE72052BA49179009B9237 /* README.md */,
+				35DE72062BA49179009B9237 /* src */,
 				35DE71D92BA19C6E009B9237 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,36 +49,6 @@
 				35DE71D82BA19C6E009B9237 /* ig4_awi_mobile_app.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		35DE71DA2BA19C6E009B9237 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				B7921D232BA1AE8D000E421B /* LoginViewModel.swift */,
-				B7921D1E2BA1A7CA000E421B /* Resources */,
-				35DE71DB2BA19C6E009B9237 /* ig4_awi_mobile_appApp.swift */,
-				35DE71DD2BA19C6E009B9237 /* LoginScreen.swift */,
-				35DE71DF2BA19C73009B9237 /* Assets.xcassets */,
-				35DE71E12BA19C73009B9237 /* Preview Content */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
-		35DE71E12BA19C73009B9237 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				35DE71E22BA19C73009B9237 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		B7921D1E2BA1A7CA000E421B /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				B7921D202BA1A8C5000E421B /* logoFdJ.jpg */,
-				B7921D1F2BA1A8C5000E421B /* logo_FDJ_FINAL_vectorisé.jpg */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,12 +109,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35DE71EA2BA19D44009B9237 /* LICENSE in Resources */,
-				35DE71E32BA19C73009B9237 /* Preview Assets.xcassets in Resources */,
-				B7921D222BA1A8C5000E421B /* logoFdJ.jpg in Resources */,
-				B7921D212BA1A8C5000E421B /* logo_FDJ_FINAL_vectorisé.jpg in Resources */,
-				35DE71EC2BA19D50009B9237 /* README.md in Resources */,
-				35DE71E02BA19C73009B9237 /* Assets.xcassets in Resources */,
+				35DE720B2BA49378009B9237 /* .gitignore in Resources */,
+				35DE72092BA49179009B9237 /* src in Resources */,
+				35DE72082BA49179009B9237 /* README.md in Resources */,
+				35DE72072BA49179009B9237 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,9 +123,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35DE71DE2BA19C6E009B9237 /* LoginScreen.swift in Sources */,
-				35DE71DC2BA19C6E009B9237 /* ig4_awi_mobile_appApp.swift in Sources */,
-				B7921D242BA1AE8D000E421B /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
