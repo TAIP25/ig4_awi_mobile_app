@@ -17,19 +17,9 @@ struct HomeView: View {
                 .foregroundColor(.accentColor)
             Text("Home")
                 .font(.system(size: 24))
-
-            Button("Edit") {
-                router.navigate(to: .edit)
-            }
-            .padding(.top, 12)
-
-            Button("View") {
-                router.navigate(to: .view)
-            }
-            .padding(.top, 12)
-
-            Button("Tracks") {
-                router.navigate(to: .tracks)
+            
+            Button("Login") {
+                router.navigate(to: .login)
             }
             .padding(.top, 12)
 

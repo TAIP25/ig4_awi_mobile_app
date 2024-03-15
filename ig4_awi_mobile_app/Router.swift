@@ -10,10 +10,7 @@ import SwiftUI
 final class Router: ObservableObject {
 
     public enum Destination: Hashable {
-        case edit
-        case view
-        case tracks
-        case track(TrackModelView)
+        case login
     }
 
     @Published var navPath = NavigationPath()
