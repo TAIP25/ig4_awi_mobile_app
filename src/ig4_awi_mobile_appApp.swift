@@ -11,7 +11,7 @@ import SwiftUI
 struct ig4_awi_mobile_appApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginScreen()
         }
     }
 }
