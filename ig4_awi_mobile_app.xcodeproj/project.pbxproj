@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3582DF092BA5D8DE00F8DA18 /* CreneauHoraire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582DF022BA5D8DE00F8DA18 /* CreneauHoraire.swift */; };
+		3582DF0A2BA5D8DE00F8DA18 /* CreneauHoraireService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582DF032BA5D8DE00F8DA18 /* CreneauHoraireService.swift */; };
+		3582DF0B2BA5D8DE00F8DA18 /* CreneauHoraireView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582DF042BA5D8DE00F8DA18 /* CreneauHoraireView.swift */; };
+		3582DF0C2BA5D8DF00F8DA18 /* CreneauHoraireViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582DF052BA5D8DE00F8DA18 /* CreneauHoraireViewModel.swift */; };
+		3582DF102BA5DB3C00F8DA18 /* CreneauHoraireState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582DF0F2BA5DB3C00F8DA18 /* CreneauHoraireState.swift */; };
+		3582DF122BA6028000F8DA18 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582DF112BA6028000F8DA18 /* Response.swift */; };
 		B73D8D402BA4C09B000CADC6 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B73D8D2C2BA4C09B000CADC6 /* README.md */; };
 		B73D8D4E2BA4C09B000CADC6 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = B73D8D3F2BA4C09B000CADC6 /* LICENSE */; };
-		B73D8DD12BA4CBE9000CADC6 /* HoraireView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D8DBF2BA4CBE9000CADC6 /* HoraireView.swift */; };
-		B73D8DD22BA4CBE9000CADC6 /* HoraireViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D8DC02BA4CBE9000CADC6 /* HoraireViewModel.swift */; };
 		B73D8DD32BA4CBEA000CADC6 /* LoginState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D8DC22BA4CBE9000CADC6 /* LoginState.swift */; };
 		B73D8DD42BA4CBEA000CADC6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D8DC32BA4CBE9000CADC6 /* LoginView.swift */; };
 		B73D8DD52BA4CBEA000CADC6 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D8DC42BA4CBE9000CADC6 /* LoginViewModel.swift */; };
@@ -25,11 +29,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3582DF022BA5D8DE00F8DA18 /* CreneauHoraire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreneauHoraire.swift; sourceTree = "<group>"; };
+		3582DF032BA5D8DE00F8DA18 /* CreneauHoraireService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreneauHoraireService.swift; sourceTree = "<group>"; };
+		3582DF042BA5D8DE00F8DA18 /* CreneauHoraireView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreneauHoraireView.swift; sourceTree = "<group>"; };
+		3582DF052BA5D8DE00F8DA18 /* CreneauHoraireViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreneauHoraireViewModel.swift; sourceTree = "<group>"; };
+		3582DF0F2BA5DB3C00F8DA18 /* CreneauHoraireState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreneauHoraireState.swift; sourceTree = "<group>"; };
+		3582DF112BA6028000F8DA18 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		B73D8D1B2BA4BC10000CADC6 /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B73D8D2C2BA4C09B000CADC6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B73D8D3F2BA4C09B000CADC6 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		B73D8DBF2BA4CBE9000CADC6 /* HoraireView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoraireView.swift; sourceTree = "<group>"; };
-		B73D8DC02BA4CBE9000CADC6 /* HoraireViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoraireViewModel.swift; sourceTree = "<group>"; };
 		B73D8DC22BA4CBE9000CADC6 /* LoginState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginState.swift; sourceTree = "<group>"; };
 		B73D8DC32BA4CBE9000CADC6 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		B73D8DC42BA4CBE9000CADC6 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -54,6 +62,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3582DF082BA5D8DE00F8DA18 /* HoraireMVI */ = {
+			isa = PBXGroup;
+			children = (
+				3582DF022BA5D8DE00F8DA18 /* CreneauHoraire.swift */,
+				3582DF032BA5D8DE00F8DA18 /* CreneauHoraireService.swift */,
+				3582DF042BA5D8DE00F8DA18 /* CreneauHoraireView.swift */,
+				3582DF052BA5D8DE00F8DA18 /* CreneauHoraireViewModel.swift */,
+				3582DF0F2BA5DB3C00F8DA18 /* CreneauHoraireState.swift */,
+			);
+			path = HoraireMVI;
+			sourceTree = "<group>";
+		};
 		B73D8D122BA4BC10000CADC6 = {
 			isa = PBXGroup;
 			children = (
@@ -70,15 +90,6 @@
 				B73D8D1B2BA4BC10000CADC6 /* test.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		B73D8DC12BA4CBE9000CADC6 /* HoraireVVM */ = {
-			isa = PBXGroup;
-			children = (
-				B73D8DBF2BA4CBE9000CADC6 /* HoraireView.swift */,
-				B73D8DC02BA4CBE9000CADC6 /* HoraireViewModel.swift */,
-			);
-			path = HoraireVVM;
 			sourceTree = "<group>";
 		};
 		B73D8DC52BA4CBE9000CADC6 /* LoginMVI */ = {
@@ -111,7 +122,8 @@
 		B73D8DD02BA4CBE9000CADC6 /* ig4_awi_mobile_app */ = {
 			isa = PBXGroup;
 			children = (
-				B73D8DC12BA4CBE9000CADC6 /* HoraireVVM */,
+				3582DF112BA6028000F8DA18 /* Response.swift */,
+				3582DF082BA5D8DE00F8DA18 /* HoraireMVI */,
 				B73D8DC52BA4CBE9000CADC6 /* LoginMVI */,
 				B73D8DC72BA4CBE9000CADC6 /* Preview Content */,
 				B73D8DCA2BA4CBE9000CADC6 /* Resources */,
@@ -198,15 +210,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B73D8DD12BA4CBE9000CADC6 /* HoraireView.swift in Sources */,
 				B73D8DD32BA4CBEA000CADC6 /* LoginState.swift in Sources */,
+				3582DF102BA5DB3C00F8DA18 /* CreneauHoraireState.swift in Sources */,
+				3582DF092BA5D8DE00F8DA18 /* CreneauHoraire.swift in Sources */,
+				3582DF122BA6028000F8DA18 /* Response.swift in Sources */,
 				B73D8DD42BA4CBEA000CADC6 /* LoginView.swift in Sources */,
+				3582DF0A2BA5D8DE00F8DA18 /* CreneauHoraireService.swift in Sources */,
 				B73D8DDA2BA4CBEA000CADC6 /* HomeView.swift in Sources */,
 				B73D8DDD2BA4CBEA000CADC6 /* Router.swift in Sources */,
 				B73D8DDB2BA4CBEA000CADC6 /* ig4_awi_mobile_appApp.swift in Sources */,
 				B73D8DDC2BA4CBEA000CADC6 /* JSONHelper.swift in Sources */,
 				B73D8DD52BA4CBEA000CADC6 /* LoginViewModel.swift in Sources */,
-				B73D8DD22BA4CBE9000CADC6 /* HoraireViewModel.swift in Sources */,
+				3582DF0C2BA5D8DF00F8DA18 /* CreneauHoraireViewModel.swift in Sources */,
+				3582DF0B2BA5D8DE00F8DA18 /* CreneauHoraireView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +370,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = robin.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -382,6 +402,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = robin.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

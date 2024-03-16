@@ -22,6 +22,10 @@ struct HomeView: View {
                 router.navigate(to: .login)
             }
             .padding(.top, 12)
+            
+            Button("Planning") {
+                router.navigate(to: .planning)
+            }
 
         }
         .padding()

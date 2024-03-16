@@ -13,6 +13,7 @@ struct ig4_awi_mobile_appApp: App {
     @ObservedObject var router = Router()
     
     var login = LoginViewModel()
+    var creneauViewModel = CreneauHoraireViewModel(service: CreneauHoraireService())
     
     var body: some Scene {
         WindowGroup {
@@ -22,6 +23,9 @@ struct ig4_awi_mobile_appApp: App {
                         destination in switch destination{
                         case .login:
                             LoginView(viewModel: login)
+                        case .planning:
+                            CreneauHoraireView(viewModel: creneauViewModel)
+                            
                         }
                     
                     }

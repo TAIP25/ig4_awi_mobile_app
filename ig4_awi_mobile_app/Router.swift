@@ -11,6 +11,7 @@ final class Router: ObservableObject {
 
     public enum Destination: Hashable {
         case login
+        case planning
     }
 
     @Published var navPath = NavigationPath()
