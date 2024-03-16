@@ -15,13 +15,13 @@
 		B73D8DD42BA4CBEA000CADC6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D8DC32BA4CBE9000CADC6 /* LoginView.swift */; };
 		B73D8DD52BA4CBEA000CADC6 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D8DC42BA4CBE9000CADC6 /* LoginViewModel.swift */; };
 		B73D8DD62BA4CBEA000CADC6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B73D8DC62BA4CBE9000CADC6 /* Preview Assets.xcassets */; };
-		B73D8DD72BA4CBEA000CADC6 /* logo_FDJ_FINAL_vectorisé.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B73D8DC82BA4CBE9000CADC6 /* logo_FDJ_FINAL_vectorisé.jpg */; };
 		B73D8DD82BA4CBEA000CADC6 /* logoFdJ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B73D8DC92BA4CBE9000CADC6 /* logoFdJ.jpg */; };
 		B73D8DD92BA4CBEA000CADC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B73D8DCB2BA4CBE9000CADC6 /* Assets.xcassets */; };
 		B73D8DDA2BA4CBEA000CADC6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D8DCC2BA4CBE9000CADC6 /* HomeView.swift */; };
 		B73D8DDB2BA4CBEA000CADC6 /* ig4_awi_mobile_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D8DCD2BA4CBE9000CADC6 /* ig4_awi_mobile_appApp.swift */; };
 		B73D8DDC2BA4CBEA000CADC6 /* JSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D8DCE2BA4CBE9000CADC6 /* JSONHelper.swift */; };
 		B73D8DDD2BA4CBEA000CADC6 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D8DCF2BA4CBE9000CADC6 /* Router.swift */; };
+		B7AFC4312BA5F2FD0012F37B /* logo_vectorise.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B7AFC4302BA5F2FD0012F37B /* logo_vectorise.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,13 +34,13 @@
 		B73D8DC32BA4CBE9000CADC6 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		B73D8DC42BA4CBE9000CADC6 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		B73D8DC62BA4CBE9000CADC6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B73D8DC82BA4CBE9000CADC6 /* logo_FDJ_FINAL_vectorisé.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "logo_FDJ_FINAL_vectorisé.jpg"; sourceTree = "<group>"; };
 		B73D8DC92BA4CBE9000CADC6 /* logoFdJ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logoFdJ.jpg; sourceTree = "<group>"; };
 		B73D8DCB2BA4CBE9000CADC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B73D8DCC2BA4CBE9000CADC6 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		B73D8DCD2BA4CBE9000CADC6 /* ig4_awi_mobile_appApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ig4_awi_mobile_appApp.swift; sourceTree = "<group>"; };
 		B73D8DCE2BA4CBE9000CADC6 /* JSONHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONHelper.swift; sourceTree = "<group>"; };
 		B73D8DCF2BA4CBE9000CADC6 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		B7AFC4302BA5F2FD0012F37B /* logo_vectorise.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo_vectorise.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +102,7 @@
 		B73D8DCA2BA4CBE9000CADC6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				B73D8DC82BA4CBE9000CADC6 /* logo_FDJ_FINAL_vectorisé.jpg */,
+				B7AFC4302BA5F2FD0012F37B /* logo_vectorise.jpg */,
 				B73D8DC92BA4CBE9000CADC6 /* logoFdJ.jpg */,
 			);
 			path = Resources;
@@ -183,9 +183,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B73D8D4E2BA4C09B000CADC6 /* LICENSE in Resources */,
-				B73D8DD72BA4CBEA000CADC6 /* logo_FDJ_FINAL_vectorisé.jpg in Resources */,
 				B73D8DD82BA4CBEA000CADC6 /* logoFdJ.jpg in Resources */,
 				B73D8DD62BA4CBEA000CADC6 /* Preview Assets.xcassets in Resources */,
+				B7AFC4312BA5F2FD0012F37B /* logo_vectorise.jpg in Resources */,
 				B73D8DD92BA4CBEA000CADC6 /* Assets.xcassets in Resources */,
 				B73D8D402BA4C09B000CADC6 /* README.md in Resources */,
 			);
