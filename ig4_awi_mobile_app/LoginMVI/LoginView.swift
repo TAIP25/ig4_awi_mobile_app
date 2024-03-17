@@ -37,9 +37,17 @@ struct LoginView: View {
             
             switch viewModel.state {
                     case .success:
-                        Text("La connexion a réussi")
-                            .foregroundColor(.green)
-                            .padding()
+                        let defaults = UserDefaults.standard
+                        if let user = defaults.data(forKey: "benevole"),
+                           let benevole = try? JSONDecoder().decode(Benevole.self, from: user) {
+                            Text("La connexion a réussi, connecté en tant que : \(benevole.prenom)")
+                                .foregroundColor(.green)
+                                .padding()
+                        } else {
+                            Text("Erreur lors de la récupération des données du bénévole")
+                                .foregroundColor(.red)
+                                .padding()
+                        }
                 
                     case .failure(let error):
                         Text("La connexion a échouée : \(error.localizedDescription)")

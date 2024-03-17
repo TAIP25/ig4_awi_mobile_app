@@ -21,16 +21,17 @@ struct Benevole: Codable {
     let email: String
     let password: String
     let pseudo: String
+    let statut: String
     let tailleTShirt: String?
     let vegetarien: Bool?
     let hebergement: String?
-    let gameFavori: Int?
+    let jeuFavoriId: Int?
     let picture: Int?
     let associationID: Int?
     let adresse: String?
     let telephone: String?
-    let createdAt: Date
-    let updatedAt: Date
+    let createdAt: String
+    let updatedAt: String
     // Ajoutez d'autres propriétés du bénévole si nécessaire
 }
 
@@ -67,47 +68,41 @@ class LoginViewModel: ObservableObject {
         }
 
         URLSession.shared.dataTask(with: request) { data, response, error in
-            if let error = error {
-                DispatchQueue.main.async {
+            DispatchQueue.main.async { // Déplacez tout le code suivant sur le thread principal
+                if let error = error {
                     self.state = .failure(error)
+                    return
                 }
-                return
-            }
 
-            guard let data = data else {
-                DispatchQueue.main.async {
+                guard let data = data else {
                     self.state = .failure(NSError(domain: "", code: 0, userInfo: nil))
+                    return
                 }
-                return
-            }
 
-            do {
-                // Ici, vous pouvez décoder la réponse du serveur si nécessaire
-                // Par exemple, si le serveur renvoie un jeton d'authentification
-                print("Ici")
-                let decoder = JSONDecoder()
-                        do {
-                            let response = try decoder.decode(LoginResponse.self, from: data)
-                            let defaults = UserDefaults.standard
-                            let benevole : Benevole  = response.benevole
-                            defaults.set(benevole, forKey: "benevole")
-                            self.message = response.message
-                            self.token = response.token
-                            self.state = .success
-                        } catch {
-                            self.state = .failure(error)
-                        }
-                
+                do {
+                    let decoder = JSONDecoder()
+                    //decoder.dateDecodingStrategy = .iso8601
 
-                DispatchQueue.main.async {
+                    print(String(data: data, encoding: .utf8) ?? "No data")
+
+                    let response = try decoder.decode(LoginResponse.self, from: data)
+
+                    let defaults = UserDefaults.standard
+                    let encoder = JSONEncoder()
+                    if let encodedBenevole = try? encoder.encode(response.benevole) {
+                        defaults.set(encodedBenevole, forKey: "benevole")
+                    }
+
+                    self.message = response.message
+                    self.token = response.token
+
                     self.state = .success
-                }
-            } catch {
-                DispatchQueue.main.async {
+                } catch {
                     self.state = .failure(error)
                 }
             }
         }.resume()
+
     }
 }
 
