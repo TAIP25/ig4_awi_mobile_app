@@ -1,53 +1,63 @@
 //
-//  LoginViewModel.swift
-//  ig4_awi_mobile_app
+//  SignupViewModel.swift
+//  test
 //
-//  Created by etud on 13/03/2024.
+//  Created by etud on 18/03/2024.
 //
 
 import SwiftUI
 
-struct LoginResponse: Codable {
+struct SignupResponse: Codable {
     let benevole: Benevole
     let message: String
-    let token: String
     let severity: String
 }
 
 
-
-class LoginViewModel: ObservableObject {
+class SignupViewModel: ObservableObject{
     
-
-    @Published var email: String = ""
-    @Published var password: String = ""
-    @Published var state: LoginState = .idle
+    @Published var prenom : String = ""
+    @Published var nom : String = ""
+    @Published var email : String = ""
+    @Published var pseudo : String = ""
+    @Published var password : String = ""
+    @Published var confirmPassword : String = ""
     
     @Published var message : String = ""
-    @Published var token : String = ""
+    @Published var state : SignupState = .idle
     
 
-    func login() {
+    func signup(){
+        
+    
+        
         state = .loading
-
-        guard !email.isEmpty, !password.isEmpty else {
+        
+        guard !email.isEmpty, !password.isEmpty, !prenom.isEmpty,
+        !nom.isEmpty, !pseudo.isEmpty, !confirmPassword.isEmpty
+        else {
             state = .failure(NSError(domain: "", code: 0, userInfo: nil))
             return
         }
-
-        let url = URL(string: "https://festival-du-jeu-api.onrender.com/benevole/login")!
+        
+        guard password == confirmPassword else {
+            state = .failure(NSError(domain: "", code: 0, userInfo: nil))
+            return
+        }
+        
+        let url = URL(string: "https://festival-du-jeu-api.onrender.com/benevole")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-
-        let parameters: [String: Any] = ["email": email, "password": password]
+        
+        let parameters: [String: Any] = ["prenom": prenom, "nom": nom ,"email": email, "pseudo": pseudo, "password": password]
         do {
             request.httpBody = try JSONSerialization.data(withJSONObject: parameters)
         } catch {
             state = .failure(error)
             return
         }
-
+        
         URLSession.shared.dataTask(with: request) { data, response, error in
             DispatchQueue.main.async { // Déplacez tout le code suivant sur le thread principal
                 if let error = error {
@@ -56,7 +66,7 @@ class LoginViewModel: ObservableObject {
                 }
 
                 guard let data = data else {
-                    self.state = .failure(NSError(domain: "", code: 0, userInfo: nil))
+                    self.state = .failure(NSError(domain: "", code:0, userInfo: nil))
                     return
                 }
 
@@ -65,24 +75,16 @@ class LoginViewModel: ObservableObject {
 
                     print(String(data: data, encoding: .utf8) ?? "No data")
 
-                    let response = try decoder.decode(LoginResponse.self, from: data)
-
-                    let defaults = UserDefaults.standard
-                    let encoder = JSONEncoder()
-                    if let encodedBenevole = try? encoder.encode(response.benevole) {
-                        defaults.set(encodedBenevole, forKey: "benevole")
-                    }
+                    let response = try decoder.decode(SignupResponse.self, from: data)
 
                     self.message = response.message
-                    self.token = response.token
-
                     self.state = .success
+                    
                 } catch {
                     self.state = .failure(error)
                 }
             }
         }.resume()
-
+        
     }
 }
-

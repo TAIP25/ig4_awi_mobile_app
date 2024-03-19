@@ -4,6 +4,8 @@ import SwiftUI
 struct LoginView: View {
     @ObservedObject var viewModel: LoginViewModel
     
+    @EnvironmentObject var router: Router
+    
     let logo = UIImage(named: "logo_vectorise")
     
     @State private var errorMessage: String?
@@ -32,6 +34,20 @@ struct LoginView: View {
                 .background(Color.white)
                 .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
                 .cornerRadius(5)
+            
+            Button(action: {
+                router.navigate(to: .signup)
+                        }) {
+                            HStack {
+                                Text("Pas de compte ?")
+                                    .font(.footnote)
+                                Text("Inscrivez-vous !")
+                                    .font(.footnote)
+                                    .bold()
+                            }
+                            .foregroundColor(.blue)
+                        }
+                        .buttonStyle(PlainButtonStyle())
             
             Spacer()
             

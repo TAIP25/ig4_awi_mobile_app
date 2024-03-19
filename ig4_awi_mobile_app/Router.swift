@@ -11,9 +11,17 @@ final class Router: ObservableObject {
 
     public enum Destination: Hashable {
         case login
+        case signup
     }
+    
 
     @Published var navPath = NavigationPath()
+    
+    @Published var destination : Destination = .signup {
+        willSet{
+            navigate(to: newValue)
+        }
+    }
 
     func navigate(to destination: Destination) {
         navPath.append(destination)

@@ -13,7 +13,8 @@ struct ig4_awi_mobile_appApp: App {
     @ObservedObject var router = Router()
     
     var login = LoginViewModel()
-    
+    var signup = SignupViewModel()
+        
     var body: some Scene {
         WindowGroup {
             NavigationStack(path: $router.navPath){
@@ -22,7 +23,10 @@ struct ig4_awi_mobile_appApp: App {
                         destination in switch destination{
                         case .login:
                             LoginView(viewModel: login)
+                        case .signup:
+                            SignupView(viewModel: signup, destination: destination)
                         }
+                        
                     
                     }
             }
