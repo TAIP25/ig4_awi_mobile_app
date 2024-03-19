@@ -10,13 +10,18 @@ import SwiftUI
 final class Router: ObservableObject {
 
     public enum Destination: Hashable {
-        case edit
-        case view
-        case tracks
-        case track(TrackModelView)
+        case login
+        case signup
     }
+    
 
     @Published var navPath = NavigationPath()
+    
+    @Published var destination : Destination = .signup {
+        willSet{
+            navigate(to: newValue)
+        }
+    }
 
     func navigate(to destination: Destination) {
         navPath.append(destination)
