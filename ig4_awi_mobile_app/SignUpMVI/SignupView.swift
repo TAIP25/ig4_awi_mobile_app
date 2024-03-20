@@ -125,7 +125,7 @@ struct SignupView: View {
         .padding()
         .onChange(of: viewModel.state){ oldState, newState in
             if case .success = newState{
-                router.navigate(to: .login)
+                router.navigate(to: .home)
             }
         }
     }

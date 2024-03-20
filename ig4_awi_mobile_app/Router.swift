@@ -12,6 +12,8 @@ final class Router: ObservableObject {
     public enum Destination: Hashable {
         case login
         case signup
+        case home
+        case planning
     }
     
 

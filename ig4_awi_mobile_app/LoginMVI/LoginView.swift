@@ -12,12 +12,12 @@ struct LoginView: View {
     //@State private var state: LoginState?
 
     var body: some View {
-        VStack {
+        VStack(spacing: 25) {
             Image(uiImage: logo!)
                 .resizable()
                 .frame(width: 256, height: 151)
+    
             
-            Spacer()
             
             TextField("Mail", text: $viewModel.email)
                 .autocapitalization(.none)
@@ -48,8 +48,6 @@ struct LoginView: View {
                             .foregroundColor(.blue)
                         }
                         .buttonStyle(PlainButtonStyle())
-            
-            Spacer()
             
             switch viewModel.state {
                     case .success:
@@ -88,5 +86,11 @@ struct LoginView: View {
             }
         }
         .padding()
+        .onChange(of: viewModel.state){ oldState, newState in
+            if case .success = newState{
+                router.navigate(to: .home)
+            }
+        }
+
     }
 }
