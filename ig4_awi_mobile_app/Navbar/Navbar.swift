@@ -19,7 +19,6 @@ struct NavbarView: View {
     
     var body: some View{
         
-        let silver = Color(red: 230/255, green:230/255, blue:230/255);
         let primary = Color(red: 115/255, green:150/255, blue:0/255);
 
             HStack() {
@@ -56,7 +55,6 @@ struct NavbarView: View {
                 .overlay(Divider(), alignment: .trailing)
             }
             .frame(maxWidth: .infinity)
-            .background(silver)
             .overlay(Rectangle().frame(width: nil, height: 2, alignment: .top).foregroundColor(primary), alignment: .top)
         }
 }

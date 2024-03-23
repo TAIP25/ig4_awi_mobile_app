@@ -14,6 +14,8 @@ struct ig4_awi_mobile_appApp: App {
     
     var login = LoginViewModel()
     var signup = SignupViewModel()
+    var festivalRegisterVM = FestivalRegisterViewModel()
+    var festivalVM = FestivalViewModel()
         
     var body: some Scene {
         WindowGroup {
@@ -26,9 +28,11 @@ struct ig4_awi_mobile_appApp: App {
                         case .signup:
                             SignupView(viewModel: signup, destination: destination)
                         case .home:
-                            HomeView()
+                            HomeView(festivalVM: festivalVM)
                         case .planning:
                             PlanningView()
+                        case .festivalRegister:
+                            FestivalRegisterView(viewModel: festivalRegisterVM, festivalVM: festivalVM)
                         }
                     
                     }

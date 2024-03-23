@@ -14,6 +14,7 @@ final class Router: ObservableObject {
         case signup
         case home
         case planning
+        case festivalRegister
     }
     
 
@@ -35,5 +36,6 @@ final class Router: ObservableObject {
 
     func navigateToRoot() {
         navPath.removeLast(navPath.count)
+        
     }
 }
