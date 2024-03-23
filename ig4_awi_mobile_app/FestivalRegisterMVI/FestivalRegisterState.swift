@@ -1,10 +1,16 @@
+//
+//  FestivalRegisterState.swift
+//  test
+//
+//  Created by etud on 21/03/2024.
+//
 
-enum LoginState: Equatable{
+enum FestivalRegisterState: Equatable {
     
-    static func == (lhs: LoginState, rhs: LoginState) -> Bool {
+    static func == (lhs: FestivalRegisterState, rhs: FestivalRegisterState) -> Bool {
         switch lhs{
-        case .idle:
-            if case .idle = rhs{
+        case .initial:
+            if case .initial = rhs{
                 return true
             }else{
                 return false
@@ -17,27 +23,26 @@ enum LoginState: Equatable{
                 return false
             }
             
-        case .success:
-            if case .success = rhs{
+        case .error:
+            if case .error =
+                rhs{
                 return true
             }else{
                 return false
             }
             
-        case .failure:
-            if case .failure(_) = rhs{
+        case .success:
+            if case .success =
+                rhs{
                 return true
             }else{
                 return false
             }
         }
-        
     }
     
-    case idle
+    case initial
     case loading
+    case error(String)
     case success
-    case failure(Error)
-    
-
 }

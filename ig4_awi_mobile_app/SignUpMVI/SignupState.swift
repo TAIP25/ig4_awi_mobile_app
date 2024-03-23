@@ -30,7 +30,7 @@ enum SignupState: Equatable{
             }
             
         case .failure:
-            if case let .failure(_error) = rhs{
+            if case .failure(_) = rhs{
                 return true
             }else{
                 return false

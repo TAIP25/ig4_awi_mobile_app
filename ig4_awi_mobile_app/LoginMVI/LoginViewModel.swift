@@ -63,8 +63,6 @@ class LoginViewModel: ObservableObject {
                 do {
                     let decoder = JSONDecoder()
 
-                    print(String(data: data, encoding: .utf8) ?? "No data")
-
                     let response = try decoder.decode(LoginResponse.self, from: data)
 
                     let defaults = UserDefaults.standard
@@ -72,9 +70,15 @@ class LoginViewModel: ObservableObject {
                     if let encodedBenevole = try? encoder.encode(response.benevole) {
                         defaults.set(encodedBenevole, forKey: "benevole")
                     }
+                    
+                    defaults.set(response.token, forKey: "token")
+                    
 
                     self.message = response.message
                     self.token = response.token
+                    
+                    print("Benevole id")
+                    print(response.benevole.id)
 
                     self.state = .success
                 } catch {
