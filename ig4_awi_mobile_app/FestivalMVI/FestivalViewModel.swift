@@ -44,6 +44,7 @@ class FestivalViewModel: ObservableObject{
                     self.state = .loaded(response)
                     self.festival = response
                     
+                    
                 } catch {
                     self.state = .error(error)
                 }

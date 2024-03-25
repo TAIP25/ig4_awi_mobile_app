@@ -37,7 +37,18 @@
 		B7800CED2BAC43DB00EF103C /* FestivalRegisterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7800CEC2BAC43DB00EF103C /* FestivalRegisterState.swift */; };
 		B7800CEF2BAC43ED00EF103C /* FestivalRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7800CEE2BAC43ED00EF103C /* FestivalRegisterViewModel.swift */; };
 		B7AFC4312BA5F2FD0012F37B /* logo_vectorise.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B7AFC4302BA5F2FD0012F37B /* logo_vectorise.jpg */; };
+		B7CD02D92BB04F2B00C63738 /* InscriptionBenevoleCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD02D82BB04F2B00C63738 /* InscriptionBenevoleCount.swift */; };
+		B7CD02DB2BB092DE00C63738 /* MonInscriptionBenevole.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD02DA2BB092DE00C63738 /* MonInscriptionBenevole.swift */; };
 		B7D934652BACB74600BA5180 /* Festival.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D934642BACB74600BA5180 /* Festival.swift */; };
+		B7DD50062BB0BA58006B5294 /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DD50052BB0BA58006B5294 /* Binding.swift */; };
+		B7E2AFDF2BAF5CB200B37823 /* CreneauHoraireState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E2AFDE2BAF5CB200B37823 /* CreneauHoraireState.swift */; };
+		B7E2AFE12BAF5CD100B37823 /* CreneauHoraireService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E2AFE02BAF5CD100B37823 /* CreneauHoraireService.swift */; };
+		B7E2AFE32BAF5D0500B37823 /* CreneauHoraireView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E2AFE22BAF5D0500B37823 /* CreneauHoraireView.swift */; };
+		B7E2AFE52BAF6AEC00B37823 /* PlanningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E2AFE42BAF6AEC00B37823 /* PlanningViewModel.swift */; };
+		B7E2AFE72BAF6B3E00B37823 /* PlanningState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E2AFE62BAF6B3E00B37823 /* PlanningState.swift */; };
+		B7E2AFE92BAF6C2500B37823 /* Poste.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E2AFE82BAF6C2500B37823 /* Poste.swift */; };
+		B7E2AFEB2BAF6CC100B37823 /* InscriptionBenevole.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E2AFEA2BAF6CC100B37823 /* InscriptionBenevole.swift */; };
+		B7E2AFED2BAF6D4F00B37823 /* CreneauHoraire.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E2AFEC2BAF6D4F00B37823 /* CreneauHoraire.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,7 +83,18 @@
 		B7800CEC2BAC43DB00EF103C /* FestivalRegisterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalRegisterState.swift; sourceTree = "<group>"; };
 		B7800CEE2BAC43ED00EF103C /* FestivalRegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalRegisterViewModel.swift; sourceTree = "<group>"; };
 		B7AFC4302BA5F2FD0012F37B /* logo_vectorise.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo_vectorise.jpg; sourceTree = "<group>"; };
+		B7CD02D82BB04F2B00C63738 /* InscriptionBenevoleCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InscriptionBenevoleCount.swift; sourceTree = "<group>"; };
+		B7CD02DA2BB092DE00C63738 /* MonInscriptionBenevole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonInscriptionBenevole.swift; sourceTree = "<group>"; };
 		B7D934642BACB74600BA5180 /* Festival.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Festival.swift; sourceTree = "<group>"; };
+		B7DD50052BB0BA58006B5294 /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
+		B7E2AFDE2BAF5CB200B37823 /* CreneauHoraireState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreneauHoraireState.swift; sourceTree = "<group>"; };
+		B7E2AFE02BAF5CD100B37823 /* CreneauHoraireService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreneauHoraireService.swift; sourceTree = "<group>"; };
+		B7E2AFE22BAF5D0500B37823 /* CreneauHoraireView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreneauHoraireView.swift; sourceTree = "<group>"; };
+		B7E2AFE42BAF6AEC00B37823 /* PlanningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningViewModel.swift; sourceTree = "<group>"; };
+		B7E2AFE62BAF6B3E00B37823 /* PlanningState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningState.swift; sourceTree = "<group>"; };
+		B7E2AFE82BAF6C2500B37823 /* Poste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poste.swift; sourceTree = "<group>"; };
+		B7E2AFEA2BAF6CC100B37823 /* InscriptionBenevole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InscriptionBenevole.swift; sourceTree = "<group>"; };
+		B7E2AFEC2BAF6D4F00B37823 /* CreneauHoraire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreneauHoraire.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +200,7 @@
 				B73D8DCD2BA4CBE9000CADC6 /* ig4_awi_mobile_appApp.swift */,
 				B73D8DCE2BA4CBE9000CADC6 /* JSONHelper.swift */,
 				B73D8DCF2BA4CBE9000CADC6 /* Router.swift */,
+				B7DD50052BB0BA58006B5294 /* Binding.swift */,
 			);
 			path = ig4_awi_mobile_app;
 			sourceTree = "<group>";
@@ -186,6 +209,11 @@
 			isa = PBXGroup;
 			children = (
 				B77E8A302BAB966C00180487 /* PlanningView.swift */,
+				B7E2AFDE2BAF5CB200B37823 /* CreneauHoraireState.swift */,
+				B7E2AFE02BAF5CD100B37823 /* CreneauHoraireService.swift */,
+				B7E2AFE22BAF5D0500B37823 /* CreneauHoraireView.swift */,
+				B7E2AFE42BAF6AEC00B37823 /* PlanningViewModel.swift */,
+				B7E2AFE62BAF6B3E00B37823 /* PlanningState.swift */,
 			);
 			path = PlanningMVI;
 			sourceTree = "<group>";
@@ -204,6 +232,11 @@
 				B77F75B22BA74B9000F45B32 /* Benevole.swift */,
 				B7D934642BACB74600BA5180 /* Festival.swift */,
 				B70107942BADC04B006A07A6 /* FestivalBenevole.swift */,
+				B7E2AFE82BAF6C2500B37823 /* Poste.swift */,
+				B7E2AFEA2BAF6CC100B37823 /* InscriptionBenevole.swift */,
+				B7E2AFEC2BAF6D4F00B37823 /* CreneauHoraire.swift */,
+				B7CD02D82BB04F2B00C63738 /* InscriptionBenevoleCount.swift */,
+				B7CD02DA2BB092DE00C63738 /* MonInscriptionBenevole.swift */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -308,15 +341,20 @@
 				B73D8DD12BA4CBE9000CADC6 /* HoraireView.swift in Sources */,
 				B7800CEF2BAC43ED00EF103C /* FestivalRegisterViewModel.swift in Sources */,
 				B719CA2B2BAA3BDD0050F196 /* HomeView.swift in Sources */,
+				B7CD02DB2BB092DE00C63738 /* MonInscriptionBenevole.swift in Sources */,
 				B70107952BADC04B006A07A6 /* FestivalBenevole.swift in Sources */,
 				B73D8DD32BA4CBEA000CADC6 /* LoginState.swift in Sources */,
+				B7E2AFE52BAF6AEC00B37823 /* PlanningViewModel.swift in Sources */,
 				B7800CEB2BAC412300EF103C /* FestivalRegisterView.swift in Sources */,
 				B77E8A342BAB97BF00180487 /* Navbar.swift in Sources */,
 				B73D8DD42BA4CBEA000CADC6 /* LoginView.swift in Sources */,
 				B73D8DDD2BA4CBEA000CADC6 /* Router.swift in Sources */,
+				B7E2AFE32BAF5D0500B37823 /* CreneauHoraireView.swift in Sources */,
 				B70107982BADC2F2006A07A6 /* FestivalViewModel.swift in Sources */,
 				B77E8A312BAB966C00180487 /* PlanningView.swift in Sources */,
 				B701079A2BADC306006A07A6 /* FestivalState.swift in Sources */,
+				B7E2AFE72BAF6B3E00B37823 /* PlanningState.swift in Sources */,
+				B7E2AFE12BAF5CD100B37823 /* CreneauHoraireService.swift in Sources */,
 				B73D8DDB2BA4CBEA000CADC6 /* ig4_awi_mobile_appApp.swift in Sources */,
 				B719CA262BA89D650050F196 /* SignupViewModel.swift in Sources */,
 				B73D8DDC2BA4CBEA000CADC6 /* JSONHelper.swift in Sources */,
@@ -324,9 +362,15 @@
 				B7800CED2BAC43DB00EF103C /* FestivalRegisterState.swift in Sources */,
 				B73D8DD52BA4CBEA000CADC6 /* LoginViewModel.swift in Sources */,
 				B73D8DD22BA4CBE9000CADC6 /* HoraireViewModel.swift in Sources */,
+				B7E2AFDF2BAF5CB200B37823 /* CreneauHoraireState.swift in Sources */,
+				B7DD50062BB0BA58006B5294 /* Binding.swift in Sources */,
+				B7CD02D92BB04F2B00C63738 /* InscriptionBenevoleCount.swift in Sources */,
 				B77F75B62BA74D9A00F45B32 /* SignupView.swift in Sources */,
+				B7E2AFEB2BAF6CC100B37823 /* InscriptionBenevole.swift in Sources */,
+				B7E2AFED2BAF6D4F00B37823 /* CreneauHoraire.swift in Sources */,
 				B77F75B32BA74B9000F45B32 /* Benevole.swift in Sources */,
 				B719CA282BA89E3C0050F196 /* SignupState.swift in Sources */,
+				B7E2AFE92BAF6C2500B37823 /* Poste.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

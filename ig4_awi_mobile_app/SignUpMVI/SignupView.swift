@@ -5,9 +5,7 @@ struct SignupView: View {
     
     @ObservedObject var viewModel : SignupViewModel
     
-    @EnvironmentObject var router: Router
-    @State var destination : Router.Destination
-        
+    @EnvironmentObject var router: Router        
     
     let logo = UIImage(named: "logo_vectorise")
     

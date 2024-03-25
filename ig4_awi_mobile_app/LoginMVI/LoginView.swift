@@ -7,9 +7,7 @@ struct LoginView: View {
     @EnvironmentObject var router: Router
     
     let logo = UIImage(named: "logo_vectorise")
-    
-    @State private var errorMessage: String?
-    //@State private var state: LoginState?
+        //@State private var state: LoginState?
 
     var body: some View {
         VStack(spacing: 25) {
