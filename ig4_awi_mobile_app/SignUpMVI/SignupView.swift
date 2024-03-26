@@ -5,9 +5,7 @@ struct SignupView: View {
     
     @ObservedObject var viewModel : SignupViewModel
     
-    @EnvironmentObject var router: Router
-    @State var destination : Router.Destination
-        
+    @EnvironmentObject var router: Router        
     
     let logo = UIImage(named: "logo_vectorise")
     
@@ -59,7 +57,7 @@ struct SignupView: View {
                 .cornerRadius(5)
                 .hoverEffect()
             
-            TextField("Mot de passe", text: $viewModel.password)
+            SecureField("Mot de passe", text: $viewModel.password)
                 .autocapitalization(.none)
                 .disableAutocorrection(true)
                 .padding()
@@ -68,7 +66,7 @@ struct SignupView: View {
                 .cornerRadius(5)
                 .hoverEffect()
             
-            TextField("Confirmer le mot de passe", text: $viewModel.confirmPassword)
+            SecureField("Confirmer le mot de passe", text: $viewModel.confirmPassword)
                 .autocapitalization(.none)
                 .disableAutocorrection(true)
                 .padding()
