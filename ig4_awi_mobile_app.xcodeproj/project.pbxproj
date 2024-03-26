@@ -13,6 +13,9 @@
 		B719CA262BA89D650050F196 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B719CA252BA89D650050F196 /* SignupViewModel.swift */; };
 		B719CA282BA89E3C0050F196 /* SignupState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B719CA272BA89E3C0050F196 /* SignupState.swift */; };
 		B719CA2B2BAA3BDD0050F196 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B719CA2A2BAA3BDD0050F196 /* HomeView.swift */; };
+		B73B346B2BB1CA8F008B3669 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73B346A2BB1CA8F008B3669 /* ProfileView.swift */; };
+		B73B346D2BB1CAD3008B3669 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73B346C2BB1CAD3008B3669 /* ProfileViewModel.swift */; };
+		B73B346F2BB1D140008B3669 /* ProfileState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73B346E2BB1D140008B3669 /* ProfileState.swift */; };
 		B73D8D402BA4C09B000CADC6 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B73D8D2C2BA4C09B000CADC6 /* README.md */; };
 		B73D8D4E2BA4C09B000CADC6 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = B73D8D3F2BA4C09B000CADC6 /* LICENSE */; };
 		B73D8DD12BA4CBE9000CADC6 /* HoraireView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D8DBF2BA4CBE9000CADC6 /* HoraireView.swift */; };
@@ -58,6 +61,9 @@
 		B719CA252BA89D650050F196 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		B719CA272BA89E3C0050F196 /* SignupState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupState.swift; sourceTree = "<group>"; };
 		B719CA2A2BAA3BDD0050F196 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B73B346A2BB1CA8F008B3669 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		B73B346C2BB1CAD3008B3669 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		B73B346E2BB1D140008B3669 /* ProfileState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileState.swift; sourceTree = "<group>"; };
 		B73D8D1B2BA4BC10000CADC6 /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B73D8D2C2BA4C09B000CADC6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B73D8D3F2BA4C09B000CADC6 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -125,6 +131,16 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		B73B34682BB1CA49008B3669 /* ProfilMVI */ = {
+			isa = PBXGroup;
+			children = (
+				B73B346A2BB1CA8F008B3669 /* ProfileView.swift */,
+				B73B346C2BB1CAD3008B3669 /* ProfileViewModel.swift */,
+				B73B346E2BB1D140008B3669 /* ProfileState.swift */,
+			);
+			path = ProfilMVI;
+			sourceTree = "<group>";
+		};
 		B73D8D122BA4BC10000CADC6 = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +201,7 @@
 		B73D8DD02BA4CBE9000CADC6 /* ig4_awi_mobile_app */ = {
 			isa = PBXGroup;
 			children = (
+				B73B34682BB1CA49008B3669 /* ProfilMVI */,
 				B70107962BADC2CE006A07A6 /* FestivalMVI */,
 				B7800CE92BAC408A00EF103C /* FestivalRegisterMVI */,
 				B77E8A322BAB97AF00180487 /* Navbar */,
@@ -341,6 +358,7 @@
 				B73D8DD12BA4CBE9000CADC6 /* HoraireView.swift in Sources */,
 				B7800CEF2BAC43ED00EF103C /* FestivalRegisterViewModel.swift in Sources */,
 				B719CA2B2BAA3BDD0050F196 /* HomeView.swift in Sources */,
+				B73B346F2BB1D140008B3669 /* ProfileState.swift in Sources */,
 				B7CD02DB2BB092DE00C63738 /* MonInscriptionBenevole.swift in Sources */,
 				B70107952BADC04B006A07A6 /* FestivalBenevole.swift in Sources */,
 				B73D8DD32BA4CBEA000CADC6 /* LoginState.swift in Sources */,
@@ -364,6 +382,7 @@
 				B73D8DD22BA4CBE9000CADC6 /* HoraireViewModel.swift in Sources */,
 				B7E2AFDF2BAF5CB200B37823 /* CreneauHoraireState.swift in Sources */,
 				B7DD50062BB0BA58006B5294 /* Binding.swift in Sources */,
+				B73B346B2BB1CA8F008B3669 /* ProfileView.swift in Sources */,
 				B7CD02D92BB04F2B00C63738 /* InscriptionBenevoleCount.swift in Sources */,
 				B77F75B62BA74D9A00F45B32 /* SignupView.swift in Sources */,
 				B7E2AFEB2BAF6CC100B37823 /* InscriptionBenevole.swift in Sources */,
@@ -371,6 +390,7 @@
 				B77F75B32BA74B9000F45B32 /* Benevole.swift in Sources */,
 				B719CA282BA89E3C0050F196 /* SignupState.swift in Sources */,
 				B7E2AFE92BAF6C2500B37823 /* Poste.swift in Sources */,
+				B73B346D2BB1CAD3008B3669 /* ProfileViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

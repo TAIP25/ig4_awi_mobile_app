@@ -7,6 +7,13 @@
 
 import Foundation
 
+
+
+struct KeyInscription: Hashable{
+    let creneauId: Int
+    let postId: Int
+}
+
 struct CreneauHoraireResponse: Codable {
     let creneauHoraire: [CreneauHoraire]
     let message: String
@@ -32,6 +39,8 @@ struct MesInscriptionsBenevoleResponse: Codable{
 }
 
 class PlanningViewModel: ObservableObject {
+    
+    @Published var texte = "réservé"
     @Published var state: PlanningState = .loading
     
     @Published var days : [String] = ["Samedi", "Dimanche"]
@@ -47,7 +56,9 @@ class PlanningViewModel: ObservableObject {
 
     @Published var filteredCreneauxHoraires: [CreneauHoraire] = []
     
-    @Published var inscriptionBenevole: [InscriptionBenevole] = []
+    //@Published var inscriptionBenevole: [InscriptionBenevole] = []
+    @Published var inscriptionBenevole: [KeyInscription: InscriptionBenevole] = [:]
+
     @Published var mesInscriptionsBenevole: [MonInscriptionBenevole] = []
     
     let user = UserDefaults.standard.data(forKey: "benevole")
@@ -63,7 +74,7 @@ class PlanningViewModel: ObservableObject {
         
         URLSession.shared.dataTask(with: request) { data, response, error in
             DispatchQueue.main.async { // Déplacez tout le code suivant sur le thread principal
-                if let error = error {
+                if let _error = error {
                     self.state = .error("Erreur")
                     return
                 }
@@ -100,7 +111,7 @@ class PlanningViewModel: ObservableObject {
         
         URLSession.shared.dataTask(with: request) { data, response, error in
             DispatchQueue.main.async { // Déplacez tout le code suivant sur le thread principal
-                if let error = error {
+                if let _error = error {
                     self.state = .error("Erreur")
                     return
                 }
@@ -152,7 +163,10 @@ class PlanningViewModel: ObservableObject {
                     let response = try decoder.decode(InscriptionBenevoleResponse.self, from: data)
                     
                     //Fais le ici
+//                    self.inscriptionBenevole = self.mapInscriptionBenevoleData(inscriptionBenevoleCount: response.inscription, creneauxHoraires: self.creneauxHoraires, postes: self.postes)
+
                     self.inscriptionBenevole = self.mapInscriptionBenevoleData(inscriptionBenevoleCount: response.inscription, creneauxHoraires: self.creneauxHoraires, postes: self.postes)
+
                     
                 } catch {
                     self.state = .error("error")
@@ -232,7 +246,7 @@ class PlanningViewModel: ObservableObject {
         
         URLSession.shared.dataTask(with: request) { data, response, error in
             DispatchQueue.main.async { // Déplacez tout le code suivant sur le thread principal
-                if let error = error {
+                if let _error = error {
                     self.state = .error("Erreur")
                     return
                 }
@@ -247,7 +261,7 @@ class PlanningViewModel: ObservableObject {
                 do {
                     let decoder = JSONDecoder()
                                         
-                    let response = try decoder.decode(InscriptionBenevoleResponse.self, from: data)
+                    let _response = try decoder.decode(InscriptionBenevoleResponse.self, from: data)
                     
                     self.fetchMyInscriptionBenevole(festivalId: festivalId)
                     self.fetchInscriptionBenevole(festivalId: festivalId)
@@ -264,7 +278,7 @@ class PlanningViewModel: ObservableObject {
     func handleAnnulerReservation(festivalId: Int, posteId: Int, creneauHoraireId: Int) {
         state = .loading
         
-        let benevole : Benevole = try! JSONDecoder().decode(Benevole.self, from: user!)
+        let _benevole : Benevole = try! JSONDecoder().decode(Benevole.self, from: user!)
         
         let reservation = mesInscriptionsBenevole.first(where: { $0.posteID == posteId && $0.creneauHoraireID == creneauHoraireId })
         
@@ -278,18 +292,11 @@ class PlanningViewModel: ObservableObject {
             request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         }
         
-//        let parameters: [String: Any] = ["benevoleID": benevole.id, "festivalID": festivalId ,"creneauHoraireID": creneauHoraireId, "posteID": posteId]
-//        do {
-//            request.httpBody = try JSONSerialization.data(withJSONObject: parameters)
-//        } catch {
-//            state = .error("Erreur")
-//            return
-//        }
 
         
         URLSession.shared.dataTask(with: request) { data, response, error in
             DispatchQueue.main.async { // Déplacez tout le code suivant sur le thread principal
-                if let error = error {
+                if let _error = error {
                     self.state = .error("Erreur")
                     return
                 }
@@ -304,7 +311,7 @@ class PlanningViewModel: ObservableObject {
                 do {
                     let decoder = JSONDecoder()
                                         
-                    let response = try decoder.decode(InscriptionBenevoleResponse.self, from: data)
+                    let _response = try decoder.decode(InscriptionBenevoleResponse.self, from: data)
                     
                     self.fetchMyInscriptionBenevole(festivalId: festivalId)
                     
@@ -329,36 +336,63 @@ class PlanningViewModel: ObservableObject {
         filteredCreneauxHoraires = creneauxHoraires.filter { $0.jour == selectedDay }
     }
     
-    func mapInscriptionBenevoleData(inscriptionBenevoleCount: [InscriptionBenevoleCount], creneauxHoraires: [CreneauHoraire], postes: [Poste]) -> [InscriptionBenevole] {
-        var inscriptionBenevoles: [InscriptionBenevole] = []
-        
+//    func mapInscriptionBenevoleData(inscriptionBenevoleCount: [InscriptionBenevoleCount], creneauxHoraires: [CreneauHoraire], postes: [Poste]) -> [InscriptionBenevole] {
+//        var inscriptionBenevoles: [InscriptionBenevole] = []
+//        
+//        for inscription in inscriptionBenevoleCount {
+//            let poste = self.postes.first(where: { $0.id == inscription.posteID })
+//
+//            let nombreMax = poste?.nombreBenevoles ?? 1
+//            let inscriptionBenevole = InscriptionBenevole(posteID: inscription.posteID, creneauHoraireID: inscription.creneauHoraireID, nombreInscrits: inscription._count.id, nombreMax: nombreMax)
+//
+//            inscriptionBenevoles.append(inscriptionBenevole)
+//        }
+//        
+//        var i = 0
+//        for creneau in creneauxHoraires {
+//                for poste in postes {
+//                    let newInscription = InscriptionBenevole(posteID: poste.id, creneauHoraireID: creneau.id, nombreInscrits: 0, nombreMax: poste.nombreBenevoles)
+//                    if !inscriptionBenevoles.contains(where: { $0.posteID == newInscription.posteID && $0.creneauHoraireID == newInscription.creneauHoraireID }) {
+//                        i += 1
+//                        inscriptionBenevoles.append(newInscription)
+//                    }
+//                }
+//            }
+//        
+//
+//        return inscriptionBenevoles
+//    }
+    
+    func mapInscriptionBenevoleData(inscriptionBenevoleCount: [InscriptionBenevoleCount], creneauxHoraires: [CreneauHoraire], postes: [Poste]) -> [KeyInscription: InscriptionBenevole] {
+        var inscriptionBenevoles: [KeyInscription: InscriptionBenevole] = [:]
+
         for inscription in inscriptionBenevoleCount {
             let poste = self.postes.first(where: { $0.id == inscription.posteID })
 
             let nombreMax = poste?.nombreBenevoles ?? 1
             let inscriptionBenevole = InscriptionBenevole(posteID: inscription.posteID, creneauHoraireID: inscription.creneauHoraireID, nombreInscrits: inscription._count.id, nombreMax: nombreMax)
 
-            inscriptionBenevoles.append(inscriptionBenevole)
+            let key = KeyInscription(creneauId: inscription.creneauHoraireID, postId: inscription.posteID)
+            inscriptionBenevoles[key] = inscriptionBenevole
         }
-        
-        var i = 0
+
         for creneau in creneauxHoraires {
-                for poste in postes {
-                    let newInscription = InscriptionBenevole(posteID: poste.id, creneauHoraireID: creneau.id, nombreInscrits: 0, nombreMax: poste.nombreBenevoles)
-                    if !inscriptionBenevoles.contains(where: { $0.posteID == newInscription.posteID && $0.creneauHoraireID == newInscription.creneauHoraireID }) {
-                        i += 1
-                        inscriptionBenevoles.append(newInscription)
-                    }
+            for poste in postes {
+                let newInscription = InscriptionBenevole(posteID: poste.id, creneauHoraireID: creneau.id, nombreInscrits: 0, nombreMax: poste.nombreBenevoles)
+                let key = KeyInscription(creneauId: creneau.id, postId: poste.id)
+                if inscriptionBenevoles[key] == nil {
+                    inscriptionBenevoles[key] = newInscription
                 }
             }
-        
+        }
 
         return inscriptionBenevoles
     }
+
     
-    func getInscriptionBenevole(posteID: Int, creneauHoraireID: Int) -> InscriptionBenevole? {
-        return inscriptionBenevole.first(where: { $0.posteID == posteID && $0.creneauHoraireID == creneauHoraireID })
-    }
+//    func getInscriptionBenevole(posteID: Int, creneauHoraireID: Int) -> InscriptionBenevole? {
+//        return inscriptionBenevole.first(where: { $0.posteID == posteID && $0.creneauHoraireID == creneauHoraireID })
+//    }
 
 
 

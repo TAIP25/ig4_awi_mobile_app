@@ -27,7 +27,7 @@ struct HomeView: View {
             Image(systemName: "house.fill")
                 .font(.system(size: 56))
                 .foregroundColor(.accentColor)
-            Text("Bienvenue \(benevole.prenom), id : \(benevole.id)")
+            Text("Bienvenue \(benevole.prenom)")
                 .font(.system(size: 24))
             
             if let festival = festivalVM.festival {

@@ -15,6 +15,7 @@ final class Router: ObservableObject {
         case home
         case planning
         case festivalRegister
+        case profile
         //case creneauHoraire
     }
     

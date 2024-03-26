@@ -17,6 +17,7 @@ struct ig4_awi_mobile_appApp: App {
     var festivalRegisterVM = FestivalRegisterViewModel()
     var festivalVM = FestivalViewModel()
     var planningVM = PlanningViewModel()
+    var profileVM = ProfileViewModel()
     //var creneauHoraireVM = CreneauHoraireViewModel(service: CreneauHoraireService())
         
     var body: some Scene {
@@ -35,8 +36,8 @@ struct ig4_awi_mobile_appApp: App {
                             PlanningView(viewModel: planningVM, festivalVM: festivalVM)
                         case .festivalRegister:
                             FestivalRegisterView(viewModel: festivalRegisterVM, festivalVM: festivalVM)
-//                        case .creneauHoraire:
-//                            CreneauHoraireView(viewModel: creneauHoraireVM)
+                        case .profile:
+                            ProfileView(viewModel: profileVM)
                         }
                     
                     }

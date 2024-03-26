@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MonInscriptionBenevole: Codable{
+class MonInscriptionBenevole: Codable{
     let id: Int
     let benevoleID: Int
     let posteID: Int

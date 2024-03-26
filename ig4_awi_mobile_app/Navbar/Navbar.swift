@@ -45,7 +45,7 @@ struct NavbarView: View {
                 .overlay(Divider(), alignment: .leading)
                 
                 Button(action: {
-                    router.navigate(to: .home)
+                    router.navigate(to: .profile)
                 }) {
                     Image(uiImage: logoUser!)
                         .font(.system(size: 52))
