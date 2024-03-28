@@ -40,6 +40,12 @@
 		B7800CED2BAC43DB00EF103C /* FestivalRegisterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7800CEC2BAC43DB00EF103C /* FestivalRegisterState.swift */; };
 		B7800CEF2BAC43ED00EF103C /* FestivalRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7800CEE2BAC43ED00EF103C /* FestivalRegisterViewModel.swift */; };
 		B7AFC4312BA5F2FD0012F37B /* logo_vectorise.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B7AFC4302BA5F2FD0012F37B /* logo_vectorise.jpg */; };
+		B7C02F1F2BB571140045698A /* EspaceJeuxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C02F1E2BB571140045698A /* EspaceJeuxView.swift */; };
+		B7C02F212BB5712B0045698A /* EspaceJeuxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C02F202BB5712B0045698A /* EspaceJeuxViewModel.swift */; };
+		B7C02F242BB571420045698A /* EspaceJeuxState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C02F232BB571420045698A /* EspaceJeuxState.swift */; };
+		B7C02F262BB5759E0045698A /* EspaceJeu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C02F252BB5759E0045698A /* EspaceJeu.swift */; };
+		B7C02F282BB58C4A0045698A /* JeuxSousEspaceFestival.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C02F272BB58C4A0045698A /* JeuxSousEspaceFestival.swift */; };
+		B7C02F2A2BB59AAB0045698A /* Jeu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C02F292BB59AAB0045698A /* Jeu.swift */; };
 		B7CD02D92BB04F2B00C63738 /* InscriptionBenevoleCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD02D82BB04F2B00C63738 /* InscriptionBenevoleCount.swift */; };
 		B7CD02DB2BB092DE00C63738 /* MonInscriptionBenevole.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD02DA2BB092DE00C63738 /* MonInscriptionBenevole.swift */; };
 		B7D934652BACB74600BA5180 /* Festival.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D934642BACB74600BA5180 /* Festival.swift */; };
@@ -89,6 +95,12 @@
 		B7800CEC2BAC43DB00EF103C /* FestivalRegisterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalRegisterState.swift; sourceTree = "<group>"; };
 		B7800CEE2BAC43ED00EF103C /* FestivalRegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalRegisterViewModel.swift; sourceTree = "<group>"; };
 		B7AFC4302BA5F2FD0012F37B /* logo_vectorise.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo_vectorise.jpg; sourceTree = "<group>"; };
+		B7C02F1E2BB571140045698A /* EspaceJeuxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EspaceJeuxView.swift; sourceTree = "<group>"; };
+		B7C02F202BB5712B0045698A /* EspaceJeuxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EspaceJeuxViewModel.swift; sourceTree = "<group>"; };
+		B7C02F232BB571420045698A /* EspaceJeuxState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EspaceJeuxState.swift; sourceTree = "<group>"; };
+		B7C02F252BB5759E0045698A /* EspaceJeu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EspaceJeu.swift; sourceTree = "<group>"; };
+		B7C02F272BB58C4A0045698A /* JeuxSousEspaceFestival.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeuxSousEspaceFestival.swift; sourceTree = "<group>"; };
+		B7C02F292BB59AAB0045698A /* Jeu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jeu.swift; sourceTree = "<group>"; };
 		B7CD02D82BB04F2B00C63738 /* InscriptionBenevoleCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InscriptionBenevoleCount.swift; sourceTree = "<group>"; };
 		B7CD02DA2BB092DE00C63738 /* MonInscriptionBenevole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonInscriptionBenevole.swift; sourceTree = "<group>"; };
 		B7D934642BACB74600BA5180 /* Festival.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Festival.swift; sourceTree = "<group>"; };
@@ -201,6 +213,7 @@
 		B73D8DD02BA4CBE9000CADC6 /* ig4_awi_mobile_app */ = {
 			isa = PBXGroup;
 			children = (
+				B7C02F1D2BB570FE0045698A /* EspaceJeuxMVI */,
 				B73B34682BB1CA49008B3669 /* ProfilMVI */,
 				B70107962BADC2CE006A07A6 /* FestivalMVI */,
 				B7800CE92BAC408A00EF103C /* FestivalRegisterMVI */,
@@ -254,6 +267,9 @@
 				B7E2AFEC2BAF6D4F00B37823 /* CreneauHoraire.swift */,
 				B7CD02D82BB04F2B00C63738 /* InscriptionBenevoleCount.swift */,
 				B7CD02DA2BB092DE00C63738 /* MonInscriptionBenevole.swift */,
+				B7C02F252BB5759E0045698A /* EspaceJeu.swift */,
+				B7C02F272BB58C4A0045698A /* JeuxSousEspaceFestival.swift */,
+				B7C02F292BB59AAB0045698A /* Jeu.swift */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -276,6 +292,16 @@
 				B7800CEE2BAC43ED00EF103C /* FestivalRegisterViewModel.swift */,
 			);
 			path = FestivalRegisterMVI;
+			sourceTree = "<group>";
+		};
+		B7C02F1D2BB570FE0045698A /* EspaceJeuxMVI */ = {
+			isa = PBXGroup;
+			children = (
+				B7C02F1E2BB571140045698A /* EspaceJeuxView.swift */,
+				B7C02F202BB5712B0045698A /* EspaceJeuxViewModel.swift */,
+				B7C02F232BB571420045698A /* EspaceJeuxState.swift */,
+			);
+			path = EspaceJeuxMVI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,8 +382,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B73D8DD12BA4CBE9000CADC6 /* HoraireView.swift in Sources */,
+				B7C02F212BB5712B0045698A /* EspaceJeuxViewModel.swift in Sources */,
 				B7800CEF2BAC43ED00EF103C /* FestivalRegisterViewModel.swift in Sources */,
 				B719CA2B2BAA3BDD0050F196 /* HomeView.swift in Sources */,
+				B7C02F2A2BB59AAB0045698A /* Jeu.swift in Sources */,
 				B73B346F2BB1D140008B3669 /* ProfileState.swift in Sources */,
 				B7CD02DB2BB092DE00C63738 /* MonInscriptionBenevole.swift in Sources */,
 				B70107952BADC04B006A07A6 /* FestivalBenevole.swift in Sources */,
@@ -367,6 +395,7 @@
 				B77E8A342BAB97BF00180487 /* Navbar.swift in Sources */,
 				B73D8DD42BA4CBEA000CADC6 /* LoginView.swift in Sources */,
 				B73D8DDD2BA4CBEA000CADC6 /* Router.swift in Sources */,
+				B7C02F242BB571420045698A /* EspaceJeuxState.swift in Sources */,
 				B7E2AFE32BAF5D0500B37823 /* CreneauHoraireView.swift in Sources */,
 				B70107982BADC2F2006A07A6 /* FestivalViewModel.swift in Sources */,
 				B77E8A312BAB966C00180487 /* PlanningView.swift in Sources */,
@@ -377,6 +406,7 @@
 				B719CA262BA89D650050F196 /* SignupViewModel.swift in Sources */,
 				B73D8DDC2BA4CBEA000CADC6 /* JSONHelper.swift in Sources */,
 				B7D934652BACB74600BA5180 /* Festival.swift in Sources */,
+				B7C02F282BB58C4A0045698A /* JeuxSousEspaceFestival.swift in Sources */,
 				B7800CED2BAC43DB00EF103C /* FestivalRegisterState.swift in Sources */,
 				B73D8DD52BA4CBEA000CADC6 /* LoginViewModel.swift in Sources */,
 				B73D8DD22BA4CBE9000CADC6 /* HoraireViewModel.swift in Sources */,
@@ -384,6 +414,7 @@
 				B7DD50062BB0BA58006B5294 /* Binding.swift in Sources */,
 				B73B346B2BB1CA8F008B3669 /* ProfileView.swift in Sources */,
 				B7CD02D92BB04F2B00C63738 /* InscriptionBenevoleCount.swift in Sources */,
+				B7C02F262BB5759E0045698A /* EspaceJeu.swift in Sources */,
 				B77F75B62BA74D9A00F45B32 /* SignupView.swift in Sources */,
 				B7E2AFEB2BAF6CC100B37823 /* InscriptionBenevole.swift in Sources */,
 				B7E2AFED2BAF6D4F00B37823 /* CreneauHoraire.swift in Sources */,
@@ -391,6 +422,7 @@
 				B719CA282BA89E3C0050F196 /* SignupState.swift in Sources */,
 				B7E2AFE92BAF6C2500B37823 /* Poste.swift in Sources */,
 				B73B346D2BB1CAD3008B3669 /* ProfileViewModel.swift in Sources */,
+				B7C02F1F2BB571140045698A /* EspaceJeuxView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

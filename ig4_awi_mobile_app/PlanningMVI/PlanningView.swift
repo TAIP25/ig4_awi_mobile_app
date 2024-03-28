@@ -41,12 +41,12 @@ struct PlanningView: View {
                             }
                             if let selectedPost = viewModel.selectedPost, selectedPost == post {
                                 ForEach(viewModel.filteredCreneauxHoraires, id: \.id) { creneau in
-//                                    if let inscriptionBenevole = viewModel.getInscriptionBenevole(posteID: post.id, creneauHoraireID: creneau.id) {
-                                        let key = KeyInscription(creneauId: creneau.id, postId: post.id)
+                                    let key = KeyInscription(creneauId: creneau.id, postId: post.id)
+                                    if let inscriptionBenevole = viewModel.inscriptionBenevole[key] {
                                         HStack {
                                             Text("\(creneau.jour): \(creneau.heureDebut)h - \(creneau.heureFin)h")
                                             Spacer()
-                                            ProgressView(value: Double(viewModel.inscriptionBenevole[key]!.nombreInscrits), total: Double(viewModel.inscriptionBenevole[key]!.nombreMax))
+                                            ProgressView(value: Double(inscriptionBenevole.nombreInscrits), total: Double(inscriptionBenevole.nombreMax))
                                             Spacer()
                                             Button(action: {
                                                 // Gérer l'action du bouton en fonction de l'état
@@ -57,7 +57,7 @@ struct PlanningView: View {
                                                     default:
                                                         break
                                                     }
-                                                } else if viewModel.inscriptionBenevole[key]!.nombreInscrits < viewModel.inscriptionBenevole[key]!.nombreMax {
+                                                } else if inscriptionBenevole.nombreInscrits < inscriptionBenevole.nombreMax {
                                                     viewModel.handleReservation(festivalId: festivalVM.festival!.id, posteId: post.id, creneauHoraireId: creneau.id)
                                                 }
                                             }) {
@@ -74,7 +74,7 @@ struct PlanningView: View {
 //                                                    default:
 //                                                        Text("")
 //                                                    }
-                                                } else if viewModel.inscriptionBenevole[key]!.nombreInscrits >= viewModel.inscriptionBenevole[key]!.nombreMax {
+                                                } else if inscriptionBenevole.nombreInscrits >= inscriptionBenevole.nombreMax {
                                                     Text("Plein")
                                                 } else {
                                                     Text("Réserver")
@@ -82,7 +82,7 @@ struct PlanningView: View {
                                             }
                                             
                                         }
-                                    //}
+                                    }
                                 }
                             }}
                     }
@@ -90,11 +90,6 @@ struct PlanningView: View {
             
             // Afficher les créneaux horaires et les checkboxes en fonction du jour et du poste sélectionnés
 
-            Button(action: {
-                // Valider les demandes d'inscription
-            }) {
-                Text("Valider")
-            }
         }
         .onAppear {
             self.festivalVM.fetchNextFestival()

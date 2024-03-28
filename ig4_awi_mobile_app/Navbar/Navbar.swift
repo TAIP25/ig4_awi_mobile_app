@@ -45,6 +45,18 @@ struct NavbarView: View {
                 .overlay(Divider(), alignment: .leading)
                 
                 Button(action: {
+                    router.navigate(to: .espaceJeu)
+                }) {
+                    Image(systemName: "gamecontroller")
+                        .font(.system(size: 52))
+                        .accentColor(primary)
+                        
+                }
+                .frame(maxWidth: .infinity)
+                .padding(.horizontal)
+                .overlay(Divider(), alignment: .trailing)
+                
+                Button(action: {
                     router.navigate(to: .profile)
                 }) {
                     Image(uiImage: logoUser!)
@@ -53,6 +65,8 @@ struct NavbarView: View {
                 .frame(maxWidth: .infinity)
                 .padding(.horizontal)
                 .overlay(Divider(), alignment: .trailing)
+                
+                
             }
             .frame(maxWidth: .infinity)
             .overlay(Rectangle().frame(width: nil, height: 2, alignment: .top).foregroundColor(primary), alignment: .top)

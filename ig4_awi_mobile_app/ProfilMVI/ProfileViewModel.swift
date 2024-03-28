@@ -57,7 +57,7 @@ class ProfileViewModel: ObservableObject{
                     print(String(data: data, encoding: .utf8) ?? "No data")
 
                     let response = try decoder.decode(Benevole.self, from: data)
-
+                    
                     self.prenom = response.prenom
                     self.nom = response.nom
                     self.email = response.email

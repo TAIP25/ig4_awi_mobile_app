@@ -17,6 +17,8 @@ struct HomeView: View {
     
     @ObservedObject var festivalVM: FestivalViewModel
     
+    let logo = UIImage(named: "logo_vectorise")
+    
     let user = UserDefaults.standard.data(forKey: "benevole")
     
     var body: some View {
@@ -24,9 +26,10 @@ struct HomeView: View {
         let benevole : Benevole = try! JSONDecoder().decode(Benevole.self, from: user!)
 
         VStack {
-            Image(systemName: "house.fill")
-                .font(.system(size: 56))
-                .foregroundColor(.accentColor)
+            Image(uiImage: logo!)
+                .resizable()
+                .frame(width: 256, height: 151)
+            
             Text("Bienvenue \(benevole.prenom)")
                 .font(.system(size: 24))
             
@@ -38,7 +41,7 @@ struct HomeView: View {
             
             if case .isRegister = festivalVM.state{
                 Text("Votre inscription est validé ! ")
-                Text("N'hésitez pas à vous consulter le planning ")
+                Text("N'hésitez pas à consulter le planning ")
             } else{
                 Button(action: {
                     router.navigate(to: .festivalRegister)

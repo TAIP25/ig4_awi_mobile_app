@@ -11,7 +11,7 @@ import Foundation
 struct Poste: Codable, Identifiable, Equatable{
     
     let id: Int
-    let nom: String
+    var nom: String
     let description: String
     let nombreBenevoles: Int
     let createdAt: String
